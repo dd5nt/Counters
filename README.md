@@ -45,28 +45,6 @@
 
 ---
 
-### Предлагаемая схема развития проекта
-
-```mermaid
-graph TD
-    SwaggerUI["Swagger UI"] -->|HTTP/HTTPS| API
-    CLI["CLI (url)"] -->|HTTP/HTTPS| API
-    GoogleColab["Google Colab Client"] -->|HTTP/HTTPS| API
-    TgBot1["Telegram Bot-1"] -->|HTTP/HTTPS| API
-    TgBot2["Telegram Bot-2"] -->|HTTP/HTTPS| API
-    WebClient["x Web Client.."] -->|HTTP/HTTPS| API
-
-    API["API (FastAPI)"] -->|GPU| Docker["Docker Container"]
-
-    Docker -->|REST| DataBase["DataBase"]
-    Docker -->|REST| YOLOv8OBB["YOLOv8 OBB"]
-    Docker -->|REST| YOLOv8Seg["YOLOv8 Segmentation"]
-    Docker -->|REST| Keras["Keras"]
-    Docker -->|REST| OCR["OCR"]
-    Docker -->|REST| xBusinessLogic["x Business Logic.."]
-```
-
-
 ### Пример результата работы YOLOv8 (первые тесты)
 <details><summary><h4>TRAIN-1</h4></summary>
 <img src="https://github.com/alecseiterr/counters/assets/99917230/24878214-bdba-4982-8ad6-073adeb0dfbd" alt="image" />
